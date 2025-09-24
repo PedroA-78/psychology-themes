@@ -1,0 +1,600 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+:root {
+    --title-font: 'Merriweather';
+    --text-font: 'Inter';
+    --title-color: #292923;
+    --text-color: #8a8a75;
+    --background: 254, 253, 248;
+    --foreground: 242, 242, 237;
+    --bg-dark: 41, 41, 35;
+
+
+    --white: rgb(251, 251, 248);
+    --green-olive: 125, 135, 82;
+    --dark-green-olive: rgb(82, 90, 66);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    font-family: var(--text-font);
+    color: var(--text-color);
+}
+
+/* HEADER */
+
+header {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(var(--bg-dark));
+}
+
+.header_text {
+    margin: 0;
+    font-family: var(--title-font);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    color: var(--white);
+}
+
+/* MAIN */
+
+.hero_container, .about_container,
+.problems_container, .reviews_container,
+.questions_container, .call_container {
+    width: 100%;
+    max-width: 87rem;
+    margin: 0 auto;
+    padding: 6rem 0;
+}
+
+/* SEC - HERO */
+
+.hero {
+    width: 100%;
+    height: 80dvh;
+
+    display: flex;
+    background: linear-gradient(to bottom right, #fefdf8, #fdf9ed );
+}
+
+.hero_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+}
+
+.hero_heading {
+    width: 100%;
+    max-width: 35rem;
+    margin: 0 auto;
+}
+
+.hero_heading_title {
+    margin: 0 0 1.5rem 0;
+    font-family: var(--title-font);
+    font-size: 3.75rem;
+    font-weight: 500;
+    line-height: 4.25rem;
+    color: rgb(var(--green-olive));
+}
+
+.hero_heading_title span {
+    color: var(--dark-green-olive);
+}
+
+.hero_heading_text {
+    margin: 0 0 2.5rem 0;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+.hero_heading_action {
+    display: block;
+    padding: .75rem 1rem;
+    border: none;
+    border-radius: .5rem;
+
+    font-family: var(--text-font);
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+    font-weight: 500;
+    color: rgb(254, 253, 248);
+    background-color: rgb(125, 135, 82);
+
+    cursor: pointer;
+    transition: ease-in-out 300ms;
+}
+
+.hero_heading_action:hover {
+    background-color: rgb(82, 90, 66);
+}
+
+.hero_photo_container {
+    position: relative;
+    width: 100%;
+    max-width: 24rem;
+    margin: 0 auto;
+}
+
+.hero_photo_container::before,
+.hero_photo_container::after {
+    content: '';
+    position: absolute;
+    left: -1.5rem;
+    top: -1.5rem;
+
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    opacity: .6;
+    background-color: rgb(249, 241, 212);
+}  
+
+.hero_photo_container::after {
+    left: unset;
+    right: -1.5rem;
+    top: unset;
+    bottom: -1.5rem;;
+
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    opacity: .4;
+    background-color: rgb(125, 135, 82);
+}
+
+.hero_photo_preview {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 1rem;
+}
+
+
+/* SEC - ABOUT */
+
+.about {
+    background-color: rgba(var(--background));
+}
+
+.about_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    column-gap: 3rem;
+}
+
+.about_heading_title {
+    margin: 0;
+    font-family: var(--title-font);
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 500;
+    color: var(--dark-green-olive);
+}
+
+.about_heading_line {
+    display: block;
+    width: 4rem;
+    height: .25rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    background: linear-gradient(to right, rgb(var(--green-olive)) 70%, var(--dark-green-olive));
+}
+
+.about_heading_code {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    margin: 1rem 0 2rem ;
+    color: rgb(var(--green-olive));
+}
+
+.about_description_text {
+    margin: 1rem 0 0;
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+}
+
+.about_description_text:first-child {
+    margin: 0;
+}
+
+.about_cards {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: stretch;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.about_card {
+    width: 100%;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    justify-content: center;
+    gap: .25rem .625rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background-color: #fefdf8;
+    box-sizing: border-box;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .1);
+}
+
+.about_card_icon {
+    grid-row: 1 / 3;
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .75rem;
+    background-color: rgba(var(--green-olive), .2);
+}
+
+.about_card_icon svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    stroke: var(--dark-green-olive);
+}
+
+.about_card_title {
+    margin: 0;
+    font-family: var(--title-font);
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.625rem;
+    color: var(--dark-green-olive);
+}
+
+.about_card_text {
+    margin: 0;
+}
+
+/* SEC - PROBLEMS */
+
+.problems {
+    background-color: rgb(var(--foreground));
+}
+
+.problems_heading {
+    margin-bottom: 4rem;
+}
+
+.problems_heading_title {
+    margin: 0 0 1.5rem;
+    font-family: var(--title-font);
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1;
+    color: var(--title-color);
+    text-align: center;
+}
+
+.problems_heading_text {
+    width: 100%;
+    max-width: 48rem;
+    margin: 0 auto;
+    font-size: 1.25rem;
+    line-height: 1.625;
+    text-align: center;
+}
+
+.problems_cards {
+    width: 100%;
+    max-width: 69rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.problem_card {
+    width: 100%;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: #fefdf8;
+    box-sizing: border-box;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    transition: ease-in-out 300ms;
+}
+
+.problem_card:hover {
+    transform: translateY(-.375rem);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, .1);
+}
+
+.problem_card_icon {
+    display: block;
+    margin-bottom: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .75rem;
+    background-color: rgba(var(--green-olive), .2);
+}
+
+.problem_card_icon svg {
+    width: 1.75rem;
+    height: 1.75rem;
+    stroke: var(--dark-green-olive);
+}
+
+.problem_card_title {
+    margin: 0 0 1rem;
+    font-family: var(--title-font);
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.625rem;
+    color: var(--dark-green-olive);
+}
+
+.problem_card_text {
+    margin: 0;
+    line-height: 1.625;
+}
+
+/* SEC - REVIEWS */
+
+.reviews {
+    background-color: rgba(var(--background));
+}
+
+.reviews_heading {
+    margin-bottom: 4rem;
+}
+
+.reviews_heading_title {
+    margin: 0 0 1.5rem;
+    font-family: var(--title-font);
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1;
+    color: var(--title-color);
+    text-align: center;
+}
+
+.reviews_heading_text {
+    width: 100%;
+    max-width: 48rem;
+    margin: 0 auto;
+    font-size: 1.25rem;
+    line-height: 1.625;
+    text-align: center;
+}
+
+.reviews_cards {
+    width: 100%;
+    max-width: 69rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.review_card {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 2rem;
+    border: 1px solid rgba(222, 220, 211, .8);
+    border-radius: 1rem;
+    background-color: #fefdf8;
+    box-sizing: border-box;
+    box-shadow: 0 4px 20px -4px rgba(129, 143, 86, 0.2)
+}
+
+.review_card_container {
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+}
+
+.review_card_stars {
+    margin-bottom: 1rem;
+}
+
+.review_card_text {
+    margin: 0;
+    color: var(--title-color);
+    font-size: 1.125rem;
+    font-style: italic;
+    line-height: 1.625;
+}
+
+.review_card_person {
+    padding: 1rem 0 0;
+    border-top: 1px solid rgba(222, 220, 211, .4);
+}
+
+.review_card_person_name {
+    margin: 0;
+    font-weight: 500;
+    color: var(--title-color);
+}
+
+.review_card_person_age {
+    margin: 0;
+    font-size: .875rem;
+    line-height: 1.5rem;
+}
+
+.reviews_footing {
+    margin-top: 3rem;
+}
+
+.reviews_footing_text {
+    margin: 0;
+    font-size: .875rem;
+    line-height: 1.125rem;
+    text-align: center;
+}
+
+/* SEC - FAQ */
+
+.questions {
+    background-color: rgba(var(--background));
+}
+
+.questions_heading {
+    margin-bottom: 4rem;
+}
+
+.questions_heading_title {
+    margin: 0 0 1.5rem;
+    font-family: var(--title-font);
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1;
+    color: var(--title-color);
+    text-align: center;
+}
+
+.questions_heading_text {
+    width: 100%;
+    max-width: 48rem;
+    margin: 0 auto;
+    font-size: 1.25rem;
+    line-height: 1.625;
+    text-align: center;
+}
+
+.questions_cards {
+    width: 100%;
+    max-width: 56rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.question_card {
+    margin-top: 1rem;
+    border: 1px solid rgba(222, 220, 211, .8);
+    border-radius: .625rem;
+    overflow: hidden;
+}
+
+.question_card:first-child {
+    margin-top: 0;
+}
+
+.question_card_button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-height: 5rem;
+    padding: 1.5rem 2rem;
+    border: none;
+    background-color: rgb(var(--background));
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: ease-in-out 300ms;
+}
+
+.question_card_button:hover {
+    background-color: #fdf9ed;
+}
+
+.question_card.opened .question_card_button_arrow {
+    transform: rotate(180deg);
+}
+
+.question_card_button_title {
+    margin: 0;
+    font-family: var(--title-font);
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 400;
+}
+
+.question {
+    max-height: 0;
+    background-color: #fff;
+    overflow: hidden;
+    transition: ease-in-out 300ms;
+    transition-delay: 100ms;
+}
+
+.question.opened {
+    max-height: 24rem;
+}
+
+.question_text {
+    margin: 0;
+    padding: 1.5rem 2rem;
+    line-height: 1.625;
+    color: var(--dark-green-olive);
+}
+
+/* SEC - CTA */
+
+.call {
+    background-color: rgb(var(--green-olive));
+}
+
+.call_heading_title {
+    margin: 0 0 1.5rem;
+    font-family: var(--title-font);
+    font-size: 3rem;
+    line-height: 1;
+    font-weight: 400;
+    color: var(--white);
+    text-align: center;
+}
+
+.call_heading_text{
+    width: 100%;
+    max-width: 42rem;
+    margin: 0 auto 3.5rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    color: var(--white);
+    text-align: center;
+}
+
+.call_heading_button {
+    display: block;
+    width: max-content;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: .5rem;
+    font-family: var(--text-font);
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+    color: rgb(var(--green-olive));
+    background-color: rgb(var(--background));
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    cursor: pointer;
+    transition: ease-in-out 300ms;
+}
+
+.call_heading_button:hover {
+    transform: translateY(-.25rem);
+    background-color: #fdf9ed;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+}
