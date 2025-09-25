@@ -67,6 +67,30 @@
 }
 
 @media screen and (max-width: 48rem) {
+    /* MAIN */
+
+    .hero_container, .about_container,
+    .problems_container, .reviews_container,
+    .questions_container, .call_container {
+        width: 90%;
+    }
+
+    /* SEC - ABOUT */
+
+    .about_cards {
+        max-width: 30rem;
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+    }
+
+    /* SEC - PROBLEMS; REVIEWS */
+
+    .problems_cards, .reviews_cards {
+        max-width: 38rem;
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+    }
+
     /* FOOTER */
 
     .footer_container {
@@ -81,5 +105,24 @@
 
     .footer_footing {
         grid-column: 1 / 3;
+    }
+}
+
+@media screen and (max-width: 35rem) {
+    
+    /* FOOTER */
+
+    .footer_container {
+        width: 90%;
+        grid-template-columns: 1fr;
+    }
+
+    .footer_about, .footer_contact {
+        grid-column: unset;
+        margin-bottom: 2rem;
+    }
+
+    .footer_footing {
+        grid-column: unset;
     }
 }
