@@ -51,8 +51,8 @@ header {
 .hero_container, .about_container,
 .problems_container, .reviews_container,
 .questions_container, .call_container {
-    width: 100%;
-    max-width: 87rem;
+    width: 96%;
+    max-width: 72rem;
     margin: 0 auto;
     padding: 6rem 0;
 }
@@ -71,7 +71,6 @@ header {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    justify-content: center;
 }
 
 .hero_heading {
@@ -173,7 +172,7 @@ header {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-content: center;
-    column-gap: 3rem;
+    column-gap: .5rem;
 }
 
 .about_heading_title {
@@ -605,8 +604,8 @@ footer {
 }
 
 .footer_container {
-    width: 100%;
-    max-width: 87rem;
+    width: 96%;
+    max-width: 72rem;
     margin: 0 auto;
     padding: 4rem 0 0;
 

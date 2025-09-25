@@ -1,0 +1,85 @@
+@media screen and (max-width: 64rem) {
+
+    /* SEC - PROBLEMS */
+
+    .problems_cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 53rem) {
+    /* SEC - HERO */
+
+    .hero {
+        height: unset;
+    }
+
+    .hero_container {
+        grid-template-columns: unset;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero_photo_container {
+        width: 20rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero_heading {
+        max-width: 28rem;
+    }
+
+    .hero_heading_title {
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+
+    .hero_heading_text {
+        font-size: 1.125rem;
+        line-height: 1.625rem;
+    }
+
+    .hero_heading_action {
+        width: max-content;
+        margin: 0 auto;
+    }
+
+    /* SEC - ABOUT */
+
+    .about_container {
+        grid-template-columns: unset;
+        display: flex;
+        flex-direction: column;
+        align-items: unset;
+    }
+
+    .about_description {
+        margin-bottom: 2rem;
+    }
+
+    /* SEC - REVIEWS */
+
+    .reviews_cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 48rem) {
+    /* FOOTER */
+
+    .footer_container {
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer_about {
+        grid-column: 1 / 3;
+        margin-bottom: 2rem;
+    }
+
+    .footer_footing {
+        grid-column: 1 / 3;
+    }
+}
